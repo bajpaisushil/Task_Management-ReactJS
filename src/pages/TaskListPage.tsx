@@ -1,6 +1,6 @@
 // TaskListPage.tsx
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TaskList from "../components/TaskList";
 
 interface Task {
@@ -12,7 +12,6 @@ interface Task {
 }
 
 const TaskListPage: React.FC = () => {
-  const navigate = useNavigate();
   const [tasks, setTasks] = useState<Task[]>([]);
 
   const handleToggleComplete = (taskId: number) => {
